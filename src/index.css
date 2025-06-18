@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 428px;
+  height: 762px;
+  border-radius: 50px;    
+  background: #2C2F35;
+  margin: 0 auto;
+}
+.container h1{
+  font-family: "Proxima Nova" , sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110.00000000000001%;
+  letter-spacing: -2%;
+  color: #FFFFFF;    
+  text-align: center;
+  padding-top: 40px;
+}
