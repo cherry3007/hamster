@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./Earn.css";
 
 const Earn = () => {
-  const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);
+  const [isUpgradeOpen, setIsUpgradeOpen] = useState(false);     // Для "Earn per tap"
+  const [isProfitOpen, setIsProfitOpen] = useState(false);       // Для "Profit per hour"
 
   return (
     <div>
@@ -20,7 +21,7 @@ const Earn = () => {
           <p>10 M</p>
         </div>
 
-        <div className="profit" onClick={() => setIsCardsOpen(true)}>
+        <div className="profit" onClick={() => setIsProfitOpen(true)}>
           <h3>Profit per hour</h3>
           <div className="profits">
             <img src="img.png" alt="" />
@@ -29,54 +30,49 @@ const Earn = () => {
         </div>
       </div>
 
-
-
-
+      {/* Earn per tap */}
       {isUpgradeOpen && (
         <div className="upgrade-popup">
           <button className="close-btn-small" onClick={() => setIsUpgradeOpen(false)}>&times;</button>
           <div className="poup">
             <div className="po">
-              <div className="level">
-                <h2>lvl1</h2>
-              </div>
+              <div className="level"><h2>lvl2</h2></div>
               <div className="ln"></div>
-              <div className="xmm">
-                <h4>+2</h4>
-                <img src="img.png" alt="" />
-              </div>
-              <div className="min">
-                <h5>-1000</h5>
-                <img src="img.png" alt="" />
-              </div>
+              <div className="xmm"><h4>+3</h4><img src="img.png" alt="" /></div>
+              <div className="min"><h5>-2500</h5><img src="img.png" alt="" /></div>
             </div>
             <div className="po">
-              <div className="level">
-                <h2>lvl2</h2>
-              </div>
+              <div className="level"><h2>lvl3</h2></div>
               <div className="ln"></div>
-              <div className="xmm">
-                <h4>+3</h4>
-                <img src="img.png" alt="" />
-              </div>
-              <div className="min">
-                <h5>-2500</h5>
-                <img src="img.png" alt="" />
-              </div>
+              <div className="xmm"><h4>+4</h4><img src="img.png" alt="" /></div>
+              <div className="min"><h5>-6000</h5><img src="img.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Profit per hour */}
+      {isProfitOpen && (
+        <div className="upgrade-popup">
+          <button className="close-btn-small" onClick={() => setIsProfitOpen(false)}>&times;</button>
+          <div className="poup">
+            <div className="po">
+              <div className="level"><h2>lvl1</h2></div>
+              <div className="ln"></div>
+              <div className="xmm"><h4>+2</h4><img src="img.png" alt="" /></div>
+              <div className="min"><h5>-1000</h5><img src="img.png" alt="" /></div>
             </div>
             <div className="po">
-              <div className="level">
-                <h2>lvl3</h2>
-              </div>
+              <div className="level"><h2>lvl2</h2></div>
               <div className="ln"></div>
-              <div className="xmm">
-                <h4>+4</h4>
-                <img src="img.png" alt="" />
-              </div>
-              <div className="min">
-                <h5>-6000</h5>
-                <img src="img.png" alt="" />
-              </div>
+              <div className="xmm"><h4>+3</h4><img src="img.png" alt="" /></div>
+              <div className="min"><h5>-2500</h5><img src="img.png" alt="" /></div>
+            </div>
+            <div className="po">
+              <div className="level"><h2>lvl3</h2></div>
+              <div className="ln"></div>
+              <div className="xmm"><h4>+4</h4><img src="img.png" alt="" /></div>
+              <div className="min"><h5>-6000</h5><img src="img.png" alt="" /></div>
             </div>
           </div>
         </div>
